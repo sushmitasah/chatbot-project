@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LOGIN PAGE</title>
+<style>
+body
+{
+	background-image:url("city1.jpg");
+}
+#sap{
+height:500;
+width:1333;
+
+}
+
+form{
+ width:20%;
+ color:white;
+ padding:40px 20px ;
+ display: inline-block;
+ background-color:#6d5fc6;
+ border: 2px solid white;
+ box-sizing: border-box;
+text-align:center;
+}
+
+
+</style>
+</head>
+<body>
+
+<!-- this table is for user login box -->
+
+<table id="sap" width="100%">
+<tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+
+	
+<tr>
+<td>
+<center>
+
+ 
+<form  name="Regform" onsubmit="return vali()" method="post">
+USERS LOGIN <br><br>
+<input type="text"  placeholder="enter your email" name="email" /><br><br>
+<input type="password" placeholder="enter your password" name="password" ><br><br>
+<input type="checkbox" name="remind me">Remind me<br><br>
+<input type="submit" name="Login In" value="Login In"/><br>
+</form>
+</center>
+</td>
+</tr>
+</table>
+
+
+<!-- this cript contains form validation for user login -->
+<script>
+function vali()
+{
+	var Email=document.forms["Regform"]["email"];
+
+	var Password=document.forms["Regform"]["password"];
+	
+
+if(Email.value=="")//if(address.value.length==0)
+{
+	window.alert("please enter the email");
+	return false;
+}
+
+if(Email.value.indexOf("@",0)<0)//if(address.value.length==0)
+{
+	window.alert("please write @ in the email");
+	return false;
+}
+if(Email.value.indexOf(".",0)<0)//if(address.value.length==0)
+{
+	window.alert("please write .com in the email");
+	return false;
+}
+
+if(Password.value=="")
+{
+	window.alert("please enter the password");
+	return false;
+
+}
+
+if(Password.value.length!=6)
+{
+	window.alert("please enter the password of 6 characters.");
+	return false;
+
+}
+
+
+}
+</script>
+	
+</body>
+</html>
