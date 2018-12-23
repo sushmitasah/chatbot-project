@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<title>Signup</title>
+		<style>
+			.t{
+				font-family: sans-serif;
+				text-align: center;
+				font-size: 100px;
+				align-content: center;
+				align-items: center;
+				
+			}
+			form{
+				
+				
+				
+				padding-top: 50px;
+				font-size: 30px;
+				
+				height: 300px;
+				
+				backface-visibility: hidden;
+			}
+			body{
+			    background-image: url(fintech1.jpg);
+				background-size: 1600px auto;
+				display: contents;
+				
+		 
+				
+				
+			}
+			
+			
+		</style>
+	</head>
+		<body>
+			<center><strong class="t"><font color="white" >SIGNUP</font></strong><br></center>
+			<center><strong>It's free and always will be.</strong></center>
+
+			<form id="contactForm" name="Regform" onsubmit="return vali()" method="POST">
+
+				<center><strong class="s">First name:</strong><input type="text" placeholder="first name" name="firstname" id="firstname"/><br>
+				<br></center>
+
+				<center><strong class="s">Second name:</strong><input type="text" placeholder="second name" name="secondname" id="secondname"/><br><br></center>
+
+				<center><strong class="s">Date of birth:</strong><input type="date" placeholder="12/02/99"  name="date" id="date"/><br><br></center>
+
+				<center><strong class="s">Password:</strong><input type="password" placeholder="enter your password" name="password" id="password"><br><br></center>
+
+				<center><strong class="s">Mobile number:</strong><input type="text" placeholder="9900999999" name="mobileno" id="mobileno"/><br><br></center>
+
+				<center><strong class="s">Email:</strong><input type="text"  placeholder="enter your email" name="email" id="email" /><br><br></center>
+
+				<center> <button type="submit">Signup</button><br><br></center>
+				
+				
+			</form>
+
+
+
+
+
+			<script>
+function vali()
+{
+	var Email=document.forms["Regform"]["email"];
+
+	var Password=document.forms["Regform"]["password"];
+	
+
+if(Email.value=="")//if(address.value.length==0)
+{
+	window.alert("please enter the email");
+	return false;
+}
+
+if(Email.value.indexOf("@",0)<0)//if(address.value.length==0)
+{
+	window.alert("please write @ in the email");
+	return false;
+}
+if(Email.value.indexOf(".",0)<0)//if(address.value.length==0)
+{
+	window.alert("please write .com in the email");
+	return false;
+}
+
+if(Password.value=="")
+{
+	window.alert("please enter the password");
+	return false;
+
+}
+
+if(Password.value.length!=6)
+{
+	window.alert("please enter the password of 6 characters.");
+	return false;
+
+}
+
+
+}
+</script>
+
+
+
+<script src="https://www.gstatic.com/firebasejs/5.5.3/firebase.js"></script>
+<script src="datasend_db4.js"></script> 
+			
+		</body>
+</html>
